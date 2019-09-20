@@ -1,0 +1,275 @@
+
+	 
+		{% load staticfiles %}
+		<!DOCTYPE html>
+		<html lang="en">
+		<head>
+		<title>Course - News</title>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="description" content="Course Project">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="{% static 'styles/bootstrap4/bootstrap.min.css' %}">
+		<link href="{% static 'plugins/fontawesome-free-5.0.1/css/fontawesome-all.css' %}" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" type="text/css" href="{% static 'styles/news_styles.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static 'styles/news_responsive.css' %}">
+		</head>
+		<body>
+		
+		<div class="super_container">
+		
+			<!-- Header -->
+		
+			<header class="header d-flex flex-row">
+				<div class="header_content d-flex flex-row align-items-center">
+					<!-- Logo -->
+					<div class="logo_container">
+						<div class="logo">
+							<img src="{% static 'images/logo.png' %}" alt="">
+							<span>StudyIQ</span>
+						</div>
+					</div>
+		
+					<!-- Main Navigation -->
+					<nav class="main_nav_container">
+						<div class="main_nav">
+							<ul class="main_nav_list">
+								<li class="main_nav_item"><a href="{% url 'index' %}">home</a></li>
+								<li class="main_nav_item"><a href="#">about us</a></li>
+								<li class="main_nav_item"><a href="{% url 'courses' %}">courses</a></li>
+								<li class="main_nav_item"><a href="{% url 'elements' %}">elements</a></li>
+								<li class="main_nav_item"><a href="#">news</a></li>
+								<li class="main_nav_item"><a href="{% url 'contact' %}">contact</a></li>
+							</ul>
+						</div>
+					</nav>
+				</div>
+				<div class="header_side d-flex flex-row justify-content-center align-items-center">
+					<img src="{% static 'images/phone-call.svg' %}" alt="">
+					<span>+43 4566 7788 2457</span>
+				</div>
+		
+				<!-- Hamburger -->
+				<div class="hamburger_container">
+					<i class="fas fa-bars trans_200"></i>
+				</div>
+		
+			</header>
+			
+			<!-- Menu -->
+			<div class="menu_container menu_mm">
+		
+				<!-- Menu Close Button -->
+				<div class="menu_close_container">
+					<div class="menu_close"></div>
+				</div>
+		
+				<!-- Menu Items -->
+				<div class="menu_inner menu_mm">
+					<div class="menu menu_mm">
+						<ul class="menu_list menu_mm">
+							<li class="menu_item menu_mm"><a href="{% url 'index' %}">Home</a></li>
+							<li class="menu_item menu_mm"><a href="#">About us</a></li>
+							<li class="menu_item menu_mm"><a href="{% url 'courses' %}">Courses</a></li>
+							<li class="menu_item menu_mm"><a href="{% url 'elements' %}">Elements</a></li>
+							<li class="menu_item menu_mm"><a href="#">News</a></li>
+							<li class="menu_item menu_mm"><a href="{% url 'contact' %}">Contact</a></li>
+						</ul>
+		
+						<!-- Menu Social -->
+						
+						<div class="menu_social_container menu_mm">
+							<ul class="menu_social menu_mm">
+								<li class="menu_social_item menu_mm"><a href="#"><i class="fab fa-pinterest"></i></a></li>
+								<li class="menu_social_item menu_mm"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+								<li class="menu_social_item menu_mm"><a href="#"><i class="fab fa-instagram"></i></a></li>
+								<li class="menu_social_item menu_mm"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+								<li class="menu_social_item menu_mm"><a href="#"><i class="fab fa-twitter"></i></a></li>
+							</ul>
+						</div>
+		
+						<div class="menu_copyright menu_mm"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+		Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+		<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></div>
+					</div>
+		
+				</div>
+		
+			</div>
+			
+			<!-- Home -->
+		
+			<div class="home">
+				<div class="home_background_container prlx_parent">
+					<div class="home_background prlx" style="background-image:url({% static 'images/news_background.jpg' %})"></div>
+				</div>
+				<div class="home_content">
+					<h1> Auther Name  : {{Data.authername}}</h1> 
+				</div>
+			</div>
+		
+			<div class="popular page_section">
+					<div class="container">
+					
+			
+				
+		
+						<div class="row course_boxes">
+			 
+								
+								<!-- The Department List -->
+								<div class="col-lg-4 course_box">
+									   <div class="card">
+										 <!--  <img class="card-img-top" src="{% static 'Data.bookimage' %}">   -->
+										   <img class="card-img-top" src= '{{ Data.bookimage.url }}' />
+		
+										   <div class="card-body text-center">
+		
+												<a  href= "">   <div class="card-title"><h3>Name :{{Data.bookname}}</h3>  </div>
+											   <div class="card-title"><h3>Publication :{{Data.publication}}   </h3> </div>
+											   <div class="card-title"><h3>Year :{{Data.authername}}   </h3> </a></div>
+										 
+												
+										   </div>
+											
+									   </div>
+								   </div>
+ 
+			 
+						</div>
+						<br> <br> <br> <br> 
+						<input type="submit"  class="btn btn-primary "value="Submit !" length=50 style="height: 40px">
+		
+					</div>		
+				</div>
+			
+			 
+					 
+			
+				
+			
+				</div>
+			
+				<!-- Footer -->
+			
+	<footer class="footer">
+			<div class="container">
+				
+				<!-- Newsletter -->
+	
+			 
+	
+				<!-- Footer Content -->
+	
+				<div class="footer_content">
+					<div class="row">
+	
+						<!-- Footer Column - About -->
+						<div class="col-lg-4 footer_col">
+	
+							<!-- Logo -->
+							<div class="logo_container">
+								<div class="logo">
+									<img src="{% static 'images/logo.png' %}" alt="">
+									<span>Study</span>
+								</div>
+							</div>
+	
+							<p class="footer_about_text">
+									Don’t say you don’t have enough time. You have exactly the same number of hours per day that were given to Helen Keller, Pasteur, Michelangelo, Mother Teresea,
+									 Leonardo da Vinci, Thomas Jefferson, and Albert Einstein. – H. Jackson Brown Jr.
+	
+	
+							</p>
+	
+						</div>
+	
+						<!-- Footer Column - Menu -->
+	
+						<div class="col-lg-4 footer_col">
+	
+								<!-- Logo -->
+								<div class="logo_container">
+									<div class="logo">
+										<img src="{% static 'images/logo.png' %}" alt="">
+										<span>Study</span>
+									</div>
+								</div>
+		
+								<p class="footer_about_text">
+										Aim for success, not perfection. Never give up your right to be wrong, because then you will lose the ability to learn new things and move 
+										forward with your life. Remember that fear always lurks behind perfectionism.
+								</p>
+		
+							</div>
+						<div class="col-lg-2 footer_col">
+							<div class="footer_column_title">Menu</div>
+							<div class="footer_column_content">
+								<ul>
+									<li class="footer_list_item"><a href="{% url 'index' %}">Home</a></li>
+									<li class="footer_list_item"><a href="#">About Us</a></li>
+									<li class="footer_list_item"><a href="#">Courses</a></li>
+									<li class="footer_list_item"><a href="{% url 'news' %}">News</a></li>
+									<li class="footer_list_item"><a href="{% url 'contact' %}">Contact</a></li>
+								</ul>
+							</div>
+						</div>
+	
+						<!-- Footer Column - Usefull Links -->
+	 
+	
+						<!-- Footer Column - Contact -->
+	
+						<div class="col-lg-2 footer_col">
+							<div class="footer_column_title">Contact</div>
+							<div class="footer_column_content">
+								<ul>
+									<li class="footer_contact_item">
+										<div class="footer_contact_icon">
+											<img src="{% static 'images/placeholder.svg' %}" alt="https://www.flaticon.com/authors/lucy-g">
+											
+										</div>
+										Sagar Nawale
+									</li>
+									<li class="footer_contact_item">
+										<div class="footer_contact_icon">
+											<img src="{% static 'images/smartphone.svg' %}" alt="https://www.flaticon.com/authors/lucy-g">
+										</div>
+										+91-8 766-780-580
+									</li>
+									<li class="footer_contact_item">
+										<div class="footer_contact_icon">
+											<img src="{% static 'images/envelope.svg' %}" alt="https://www.flaticon.com/authors/lucy-g">
+										</div>sagarnawale1000@gmail.com
+									</li>
+								</ul>
+							</div>
+						</div>
+	
+					</div>
+				</div>
+	
+				<!-- Footer Copyright -->
+	
+		 
+	
+			</div>
+		</footer>
+
+</div>
+
+<script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+<script src="{% static 'styles/bootstrap4/popper.js' %}"></script>
+<script src="{% static 'styles/bootstrap4/bootstrap.min.js' %}"></script>
+<script src="{% static 'plugins/greensock/TweenMax.min.js' %}"></script>
+<script src="{% static 'plugins/greensock/TimelineMax.min.js' %}"></script>
+<script src="{% static 'plugins/scrollmagic/ScrollMagic.min.js' %}"></script>
+<script src="{% static 'plugins/greensock/animation.gsap.min.js' %}"></script>
+<script src="{% static 'plugins/greensock/ScrollToPlugin.min.js' %}"></script>
+<script src="{% static 'plugins/OwlCarousel2-2.2.1/owl.carousel.js' %}"></script>
+<script src="{% static 'plugins/scrollTo/jquery.scrollTo.min.js' %}"></script>
+<script src="{% static 'plugins/easing/easing.js' %}"></script>
+<script src="{% static 'js/custom.js' %}"></script>
+
+</body>
+</html>
